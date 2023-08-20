@@ -26,6 +26,8 @@ for job in job_listings:
     company = job.find("span", class_ = "company").text.strip()
     location = job.find("div", class_ = "recJobLoc")["data-rc-loc"]
 
+    print(title, company, location)
+
     # Inserting scraped Data into MongoDB
     job_data = {
         "title": title,
